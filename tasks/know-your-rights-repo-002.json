@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-repo-002",
+  "title": "Monorepo + pnpm + TS/ESM + static-site + CI (build/test/lint) skeleton",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "infrastructure"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Know-Your-Rights needs an agent-neutral publishing pipeline before any rights content is written. This skeleton task sets up the monorepo structure — TypeScript, ESM, pnpm workspaces — with a static-site app placeholder and a CI pipeline (build, test, lint) that all subsequent tasks build on. No vendor-specific or agent-specific logic may appear in the core packages; anything tool-specific lives in adapters/. This is a pure engineering/infrastructure task and carries the lowest risk tier.",
+  "objective": "Bootstrap the Know-Your-Rights monorepo with pnpm workspaces, TypeScript/ESM configuration, a static-site app skeleton (Astro or Eleventy — open question, pick the most accessible/offline-friendly option), and a CI pipeline that runs build, test, and lint. The skeleton must be agent-neutral, pass pnpm build && pnpm test && pnpm lint from the root, and be ready for the content schema (task 003) and content-lint suite (task 004) to be wired in.",
+  "acceptanceCriteria": [
+    "pnpm workspaces configured with at least packages/kyr-schema, lib/editorial, apps/site, and scripts/ packages or directories stubbed out",
+    "TypeScript (strict mode) + ESM throughout; tsconfig references wired correctly for monorepo builds",
+    "Static-site app skeleton (Astro or Eleventy) renders a placeholder index page with no-JS fallback and a print stylesheet stub",
+    "CI pipeline (GitHub Actions) runs pnpm build && pnpm test && pnpm lint on push/PR and reports pass/fail",
+    "pnpm build && pnpm test && pnpm lint all pass from the repo root with zero errors",
+    "No vendor-specific, agent-specific, or API-key logic in any core package; CLAUDE.md agent-neutral-core rule satisfied",
+    "No secrets, tokens, or PII in any committed file; dependency scanning stub present in CI"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md",
+    "packages/schema/src/schemas.ts"
+  ],
+  "output": "A merged PR containing the monorepo skeleton: pnpm workspace configuration, TypeScript/ESM build config, static-site app stub, and a passing CI pipeline (build/test/lint green).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

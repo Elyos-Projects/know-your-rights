@@ -1,0 +1,37 @@
+{
+  "id": "know-your-rights-lint-004",
+  "title": "Content-lint suite: non-advice + neutrality + jurisdiction-label + citation-coverage + readability (CI gate)",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "content", "engineering"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The safety-critical subsystem of Know-Your-Rights is the content-lint suite that enforces the editorial policy (task 001). It runs in CI and gates every content PR. The suite catches individualized-advice phrasings, missing jurisdiction labels, missing 'not legal advice' banners, unsourced claims, advocacy/partisan framing, and readability ceiling violations before they reach attorney review. A regression that lets advice, partisan, or unsourced content through fails the build. Depends on the editorial policy (task 001) and content schema (task 003).",
+  "objective": "Implement the content-lint suite (lib/editorial) as a CI gate: non-advice/UPL lint, neutrality lint, jurisdiction-label check, citation-coverage check, and readability check. All checks must be fail-closed (ambiguous content is held for human review, not passed), run on every PR, and report passed/total with a per-version changelog. A regression that lets advice, partisan, unsourced, or unscoped content through must fail the build.",
+  "acceptanceCriteria": [
+    "Non-advice lint flags individualized-advice phrasings — second-person legal imperatives ('you must sue', 'you should file'), 'in your case', outcome predictions — and routes them to human review; fail-closed (flagged content does not pass without human clearance)",
+    "Jurisdiction-label check fails the build on any rights-stating claim node that lacks a named jurisdiction and a scope-level field (general vs jurisdiction-specific)",
+    "Citation-coverage check fails the build on any claim node without at least one attached Source record ('no source, no claim')",
+    "Neutrality lint flags advocacy/partisan framing, loaded language on charged topics, and 'resist or evade the law' directives",
+    "Readability check enforces the reading-level ceiling: explainers at <= grade 8, rights cards at <= grade 6 (Flesch-Kincaid or equivalent)",
+    "All five checks run in CI on every PR and report a structured result: passed/total per check type, with a per-version changelog",
+    "A deliberate regression test — content with an advice phrasing, a missing citation, and a missing jurisdiction label — fails the CI build with clear diagnostics",
+    "Reviewed by an independent editorial reviewer and the maintainer; sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-schema-003.json",
+    "packages/schema/src/schemas.ts"
+  ],
+  "output": "A merged PR containing the content-lint suite (lib/editorial) with all five checks (non-advice/UPL, neutrality, jurisdiction-label, citation-coverage, readability) wired into CI, with regression tests that verify each check fails the build when violated.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

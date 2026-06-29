@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-schema-003",
+  "title": "Rights-card / explainer content JSON Schema + single-source render to site + dataset",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "content", "engineering"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Know-Your-Rights content must be authored once and rendered to both the static site and the machine-readable dataset so the human-facing page and the partner-reusable record can never drift. This task defines the JSON Schema (Ajv-validated) for the rights-card / explainer format and wires it into a single-source build that produces both the site and the dataset export. The schema is the contract that all content tasks and the content-lint suite (task 004) build against. Depends on the monorepo skeleton (task 002).",
+  "objective": "Define and implement the Ajv-validated JSON Schema for the rights-card / explainer content format, with all required fields, and wire it into a single-source build pipeline that renders content to both the static site and the machine-readable CC-BY dataset export. Schema validation must run in CI; a schema-invalid content file must fail the build.",
+  "acceptanceCriteria": [
+    "JSON Schema defined in packages/kyr-schema with required fields: jurisdiction, scope-level (general vs jurisdiction-specific), topic/scenario, plain-language right (as general legal information, not advice), citations[], 'what you can do / who to contact', not-legal-advice banner, readingLevel, lastVerified, validUntil, reviewer sign-off record, license, and provenance",
+    "Schema validated with Ajv in strict mode; schema-invalid content files fail the CI build with a clear error",
+    "A single-source build renders content records to both the static site (HTML pages) and a machine-readable dataset (JSON/YAML export) from the same source files, with no manual sync step",
+    "At least one fixture content record passes schema validation and renders correctly to both outputs",
+    "The not-legal-advice banner and jurisdiction label fields are required (non-nullable) in the schema, enforcing the policy from task 001",
+    "pnpm build && pnpm test pass with the schema wired in; schema validation runs as part of CI",
+    "Output dataset is licensed CC-BY-4.0; license field is required in the schema"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-repo-002.json",
+    "packages/schema/src/schemas.ts"
+  ],
+  "output": "A merged PR containing the rights-card / explainer JSON Schema (packages/kyr-schema), Ajv validation wired into CI, and a single-source build pipeline that renders content to both the static site and the CC-BY machine-readable dataset export.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

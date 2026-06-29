@@ -1,0 +1,37 @@
+{
+  "id": "know-your-rights-jurisdiction-021",
+  "title": "Second jurisdiction tenant-rights pack",
+  "project": "know-your-rights",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "data"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the first pilot jurisdiction's tenant-rights content is stable and delivered (M6), Know-Your-Rights can expand to a second jurisdiction. Each jurisdiction requires its own source vetting (edict-of-government reuse terms), a licensed attorney admitted in that jurisdiction, and per-jurisdiction sourcing — there are no shortcuts to accuracy and currency. Tenant law varies significantly by jurisdiction, and content from jurisdiction A cannot be re-used for jurisdiction B. This task is backlog: not started until M6 is complete.",
+  "objective": "Produce the full source-vetted, schema-valid, attorney-reviewed structured tenant-rights dataset for a second confirmed jurisdiction, following the same process as the pilot: source vetting with recorded reuse terms, content drafting with primary-source citations to the second jurisdiction's law, content-lint suite passing, and licensed attorney sign-off (admitted in the second jurisdiction) before delivery.",
+  "acceptanceCriteria": [
+    "Second jurisdiction confirmed and selected using the same scoring criteria as task 000 (edict-of-government reusability, access-to-justice need, attorney availability, legal complexity/stability, partner plausibility)",
+    "Full source vetting completed for the second jurisdiction: all candidate sources assessed, reuse terms verified and recorded, attorney sign-off on source list",
+    "Tenant-rights explainers produced for the second jurisdiction covering the six core topics; all content primary-source-cited to the second jurisdiction's law (not the first jurisdiction)",
+    "All content passes the full content-lint suite (task 004) and is schema-valid per task 003",
+    "Licensed-attorney sign-off recorded for the second jurisdiction content (attorney admitted in the second jurisdiction, not the first); sign-off version-scoped",
+    "Structured dataset records produced for the second jurisdiction and merged into the dataset export (task 011 extended); CI validates both jurisdictions",
+    "Sequenced after M6 is complete; no content from the first jurisdiction is repurposed for the second without explicit per-claim review and re-citation"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-ops-019.json",
+    "tasks/know-your-rights-jurisdiction-000.json",
+    "tasks/know-your-rights-sources-006.json",
+    "tasks/know-your-rights-content-009.json"
+  ],
+  "output": "A CC-BY-4.0 structured tenant-rights dataset for a second confirmed jurisdiction — source-vetted, schema-valid, primary-source-cited to that jurisdiction's law, lint-clean, and licensed-attorney-signed-off — expanding the Know-Your-Rights commons to a second jurisdiction.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

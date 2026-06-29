@@ -1,0 +1,37 @@
+{
+  "id": "know-your-rights-hardening-016",
+  "title": "Hardening: expanded neutrality + non-advice red-team, link-check + staleness CI, distribution/partner runbook",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before Know-Your-Rights can be distributed to a partner organization, the content and pipeline must be hardened: the neutrality and non-advice red-team expanded to full coverage (at least 8 cases per charged topic), link-checking and staleness CI green, and a distribution/partner runbook ready so a legal-aid org can embed, print, or republish the content while preserving attribution and the 'not legal advice' framing. Depends on tasks 004, 012, and 013.",
+  "objective": "Harden the Know-Your-Rights pipeline for partner distribution: expand the neutrality and non-advice red-team to full coverage (>= 8 cases per charged-topic category, all passing); add link-checking and staleness CI checks (both green); and produce a distribution/partner runbook explaining how a legal-aid or partner organization can embed, link, print, or republish the content while preserving the required attribution, 'not legal advice' framing, and lastVerified currency stamps.",
+  "acceptanceCriteria": [
+    "Expanded neutrality red-team implemented: at least 8 test cases per charged-topic category (eviction framing, tenant-vs-landlord framing, enforcement-related topics) with multiple phrasings; all cases pass the neutrality lint (100% neutral/non-advocacy)",
+    "Expanded non-advice red-team: at least 8 test cases per advice category (outcome predictions, case-specific recommendations, 'you should [legal action]' imperatives); all cases pass the non-advice lint",
+    "Red-team results reported as passed/total at this version with a per-version changelog; any failure blocks the PR merge",
+    "Link-check CI implemented and green: all external source URLs in citation records resolve with HTTP 200; broken links fail the build",
+    "Staleness CI check green: no content record has a validUntil in the past without a staleness flag; verified by the staleness test from task 007",
+    "Distribution/partner runbook produced (docs/partner-runbook.md): how a legal-aid org embeds, links, prints, or republishes the content; required attribution format; required 'not legal advice' framing preservation; how to check lastVerified currency; how to report errors or request updates",
+    "Reviewed by an independent editorial reviewer and the maintainer; runbook approved by maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-lint-004.json",
+    "tasks/know-your-rights-site-012.json",
+    "tasks/know-your-rights-a11y-013.json",
+    "tasks/know-your-rights-provenance-007.json"
+  ],
+  "output": "A merged PR containing: expanded neutrality + non-advice red-team tests (>= 8 per category, all passing), link-check + staleness CI (both green), and the distribution/partner runbook — the artifact is partner-ready.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

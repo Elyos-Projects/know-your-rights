@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-ops-019",
+  "title": "Ops runbook + review cadence (law-change -> re-verify -> re-sign-off) + outcome tracking + maintenance rotation",
+  "project": "know-your-rights",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["legal", "civic", "access-to-justice", "governance", "engineering"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Law changes constantly, and static legal content is a liability if not maintained. After the first successful handoff (task 018), the project must establish sustainable operations: a named maintenance rotation, an enforced review cadence (law-change triggers re-verification and attorney re-sign-off before content returns to service), outcome tracking without PII, and a gated process for expanding to additional domains or jurisdictions. Depends on task 018.",
+  "objective": "Produce the operations runbook and governance documents for sustainable post-delivery maintenance of Know-Your-Rights: the maintenance rotation, the law-change -> re-verify -> attorney re-sign-off workflow, the outcome tracking format (no PII, no vanity metrics), link and staleness monitoring procedures, and the gated attorney-reviewed process for adding a second domain or jurisdiction.",
+  "acceptanceCriteria": [
+    "Ops runbook covers: publish and deploy procedures, link-check and staleness monitoring cadence, source re-verification workflow when law changes, partner support process, and escalation path for disputed content",
+    "Review cadence documented and enforced: a material law change (new statute, amended rule, controlling case decision) triggers re-verification of affected content and attorney re-sign-off before the content returns to normal service; the lastVerified/validUntil fail-safe (task 007) enforces this at runtime",
+    "Named maintenance rotation documented: at least two named individuals or roles responsible for monitoring, re-verification queues, and partner communication",
+    "Outcome tracking format defined: records content distributed (aggregate), documented beneficiary use count, neutrality/currency audit status, and date — zero reader PII, zero engagement vanity metrics",
+    "Expansion process documented: adding a second domain (worker rights) or jurisdiction requires a new source-vetting task, a licensed attorney admitted in that jurisdiction, and an editorial review before any new HIGH-tier content ships; process is attorney-gated",
+    "Runbook reviewed by maintainer and steward; maintenance rotation members named and consented"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-handoff-018.json",
+    "tasks/know-your-rights-provenance-007.json",
+    "tasks/know-your-rights-workflow-005.json"
+  ],
+  "output": "A governance document set (docs/ops-runbook.md, docs/review-cadence.md, docs/expansion-process.md) covering sustainable post-delivery maintenance: rotation, law-change re-verification workflow, outcome tracking format, and the gated expansion process for new domains/jurisdictions.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-sources-006",
+  "title": "Pilot-domain source vetting: verify reuse terms + record provenance",
+  "project": "know-your-rights",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "data"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Know-Your-Rights may only use sources whose reuse terms have been verified and recorded. For the pilot jurisdiction and domain (tenant rights, one jurisdiction — see task 000), every candidate primary-law and openly licensed legal-aid source must be assessed: is it reusable under the edict-of-government doctrine (public-domain primary law), under an explicit open license (CC-BY / CC0), or proprietary (paraphrase and cite only, never copy)? This provenance record is the legal foundation for all content in M2 and must be attorney-reviewed before any source is enabled. Depends on tasks 000 and 005.",
+  "objective": "Vet every candidate source for the pilot jurisdiction+domain (statutes, regulations, court rules, controlling case law, agency guidance, openly licensed legal-aid materials), verify and record reuse terms per source, and produce a provenance dataset with one record per source. Only sources with verified reuse terms may be enabled; proprietary annotations are never copied. The dataset must be attorney-reviewed before any source is marked enabled.",
+  "acceptanceCriteria": [
+    "Every candidate primary-law source for the pilot jurisdiction and domain is assessed: statute/regulation/court-rule/case-law/agency-guidance, with a reuse classification (edict-of-government public domain, explicit open license, or proprietary/cite-only)",
+    "Provenance dataset produced with one record per source: source name, jurisdiction, citation, retrieval date, stable URL, license/legal-status note, and enabled/disabled status",
+    "Proprietary annotations and compiled-code text are classified as cite-only and marked disabled; no proprietary annotation text is copied into any content record",
+    "Any openly licensed legal-aid material included carries a verified open license (PD, CC-BY, CC0, or CC-BY-SA) compatible with CC-BY redistribution",
+    "Attorney sign-off (admitted in the pilot jurisdiction) recorded for the source list before any source is marked enabled for content drafting",
+    "The provenance dataset is schema-valid per the Source record format defined in task 003 (lastVerified, validUntil fields populated)",
+    "At least one source is enabled covering each of: eviction notice rules, repair/habitability obligations, security deposit rules, illegal lockout/utility shutoff, retaliation protections, and housing discrimination for the pilot jurisdiction"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-jurisdiction-000.json",
+    "tasks/know-your-rights-workflow-005.json",
+    "tasks/know-your-rights-schema-003.json"
+  ],
+  "output": "A CC-BY provenance dataset (content/sources/) with one record per vetted source for the pilot jurisdiction+domain: reuse classification, provenance fields, enabled/disabled status, and recorded attorney sign-off — the legal foundation for all M2 content work.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-i18n-014",
+  "title": "i18n scaffolding (per-language-review-gated; no machine-translated legal claims shipped)",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "i18n"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Know-Your-Rights will eventually serve non-English speakers, who are disproportionately among those who need access-to-justice resources. However, machine-translating legal claims is dangerous — errors in translation can mislead people in high-stakes situations. This task scaffolds the i18n infrastructure so that translated content can be added later, with each language gated on a combined legal + linguistic review. No translated legal claims are produced or shipped in this task. Depends on the static site (task 012).",
+  "objective": "Add i18n scaffolding to the static-site and content pipeline so that translated content can be added per-language in future tasks, each gated on a combined legal review (licensed attorney in the jurisdiction) and linguistic review (native-speaker reviewer). The scaffolding must make the per-language review gate a structural property of the build, not an optional step.",
+  "acceptanceCriteria": [
+    "i18n infrastructure added to the static-site app: locale routing, language selector UI, and a mechanism for per-language content files",
+    "The English (en) content from tasks 009-010 renders correctly through the i18n infrastructure with no regressions",
+    "A placeholder for a second language (e.g., es or zh) is added to demonstrate the scaffolding without shipping any translated legal claims",
+    "The build system enforces that any non-English language directory requires a review-gate marker file (e.g., .reviewed-legal + .reviewed-linguistic) before its content is included in the build output; a language directory without both markers fails the build",
+    "Documentation added explaining the per-language review requirement: each translation is a HIGH-tier task requiring licensed-attorney review (in the jurisdiction) plus native-speaker linguistic review before any translated legal claim ships",
+    "pnpm build && pnpm test pass with the i18n scaffolding wired in",
+    "Reviewed by maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-site-012.json",
+    "tasks/know-your-rights-schema-003.json"
+  ],
+  "output": "A merged PR adding i18n scaffolding to the publishing pipeline: locale routing, language selector, per-language content directories, and a build gate enforcing that translations require combined legal + linguistic review markers before being included in the build.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

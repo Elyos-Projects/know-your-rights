@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-provenance-007",
+  "title": "Source/provenance model + citation-coverage enforcement + runtime staleness fail-safe",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "content"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Law changes constantly. Know-Your-Rights must prevent stale legal claims from being silently served as current. This task implements the Source provenance model — each claim backed by a Source record carrying lastVerified and validUntil — and the runtime staleness fail-safe: at build/render time, a claim past its validUntil window is auto-flagged or withheld, and cannot return to normal service until re-verified and re-signed-off by an attorney. Depends on the content schema (task 003) and source vetting (task 006).",
+  "objective": "Implement the Source/provenance model and staleness fail-safe: Source records with lastVerified/validUntil fields keyed to per-source-type review intervals; citation-coverage enforcement (no claim renders without an attached in-window Source); and a runtime build-time check that auto-flags or withholds claims past validUntil, preventing stale law from being silently served as current.",
+  "acceptanceCriteria": [
+    "Source record schema implemented with required fields: citation, jurisdiction, stable URL, retrieval date, license/legal-status note, lastVerified (ISO date), validUntil (ISO date), and review-interval type (statute, regulation, agency-guidance, etc.)",
+    "Per-source-type review intervals defined (e.g., statutes annually, fast-moving tenant/rent-cap rules on a shorter cadence) and documented",
+    "Citation-coverage check implemented: at build time, any claim node lacking an attached Source record fails the build ('no source, no claim')",
+    "Staleness fail-safe implemented: at build/render time, a claim whose Source is past validUntil is auto-flagged ('this may be out of date — verify before relying') or withheld for highest-stakes surfaces; a staleness test asserts no claim is served as current past its window",
+    "A claim may not return to normal service after a staleness flag until re-verified and re-signed-off by a licensed attorney; the re-sign-off writes a fresh lastVerified/validUntil",
+    "Staleness behavior is tested: a fixture with an expired validUntil triggers the flag/withhold behavior and the test fails the build",
+    "pnpm build && pnpm test pass with the provenance model wired in"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-schema-003.json",
+    "tasks/know-your-rights-sources-006.json"
+  ],
+  "output": "A merged PR implementing the Source/provenance model (lib/staleness), citation-coverage enforcement, and the runtime staleness fail-safe — making stale law a visible, gated, never-silent event in the publishing pipeline.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

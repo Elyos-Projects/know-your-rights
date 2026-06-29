@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-a11y-013",
+  "title": "Accessibility pass (WCAG 2.2 AA) + offline card legibility + reading-level CI enforcement",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "accessibility", "engineering"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Know-Your-Rights serves people who may have limited literacy, low vision, or no connectivity. WCAG 2.2 AA accessibility on core surfaces and legibility of the offline printable card are required. Reading-level ceilings (explainers at or below grade 8, cards at or below grade 6) must also be enforced in CI. This task performs the accessibility audit, fixes issues, and wires reading-level CI enforcement into the build. Depends on the static site (task 012).",
+  "objective": "Audit the core publishing surfaces for WCAG 2.2 AA compliance and fix all violations; verify that the printable wallet card is legible offline; and wire reading-level ceiling enforcement (explainers <= grade 8, cards <= grade 6) into CI so that content violating the ceiling fails the build.",
+  "acceptanceCriteria": [
+    "Core site surfaces (index, each explainer page, wallet card print view) pass WCAG 2.2 AA as verified by automated tooling (axe-core or Lighthouse) with zero AA violations",
+    "Manual accessibility spot-check performed for keyboard navigation, screen-reader landmark structure, color contrast (including print view), and focus management",
+    "Printable wallet card is legible offline: sufficient font size, adequate contrast, no content cut off when printed on a single page",
+    "Reading-level CI check enforced: explainer pages at or below grade 8 and rights cards at or below grade 6 (Flesch-Kincaid or equivalent); content exceeding the ceiling fails the CI build",
+    "Accessibility audit results documented (pass/fail per surface, tooling version, date); remediation changes described in the PR",
+    "pnpm build && pnpm test pass with the reading-level CI check wired in",
+    "Reviewed by an accessibility reviewer and the maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-site-012.json",
+    "tasks/know-your-rights-lint-004.json"
+  ],
+  "output": "A merged PR with WCAG 2.2 AA remediation on core site surfaces, documented audit results, verified offline card legibility, and reading-level ceiling enforcement wired into CI.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

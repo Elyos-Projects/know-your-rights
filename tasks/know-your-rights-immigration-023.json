@@ -1,0 +1,38 @@
+{
+  "id": "know-your-rights-immigration-023",
+  "title": "Immigration-enforcement-encounter rights — deferred, specialist review",
+  "project": "know-your-rights",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["legal", "civic", "civil-rights", "access-to-justice", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Immigration-enforcement-encounter rights are among the most consequential and dangerous topics in the access-to-justice space: an error or misunderstanding can lead to deportation, family separation, or criminal liability. This domain is deferred to after M6, behind the hardened review apparatus, and requires specialist immigration-attorney review plus a dedicated safety review. Content must never advise unlawful conduct, never advise escalation, and must be scrupulously neutral. This task is backlog: not started until M6 is complete.",
+  "objective": "Draft and iterate to final form plain-language immigration-enforcement-encounter rights explainers for a confirmed jurisdiction, covering rights during an ICE or CBP encounter, rights at the border, and relevant constitutional protections. Content states what the law of the named jurisdiction says, neutrally and completely. Must never advise unlawful conduct, resistance, or escalation. Requires specialist immigration-attorney sign-off plus a dedicated safety review before delivery.",
+  "acceptanceCriteria": [
+    "Explainers produced covering immigration-enforcement-encounter rights for the confirmed jurisdiction: rights during an interior ICE encounter, rights at a border or interior checkpoint, and relevant Fourth and Fifth Amendment protections — each as general legal information, not individualized advice",
+    "Content is strictly factual and neutral: states what the law permits, requires, and prohibits; never advises unlawful conduct, misrepresentation, resistance to a lawful order, or any action that increases legal or physical danger to the reader",
+    "Every legal claim is primary-source-cited to authoritative sources (constitutional text, statute, official agency guidance, controlling court ruling); source reuse terms verified",
+    "All content passes the full content-lint suite (task 004); extra red-team review for 'resist/evade' and 'unlawful conduct' framing applied",
+    "Carries the 'not legal advice' banner, a prominent safety note, and a route-to-help block (immigration legal aid, ACLU know-your-rights resources, local legal aid)",
+    "Specialist immigration-attorney sign-off recorded (admitted in the jurisdiction and experienced in immigration law) before delivery",
+    "Dedicated safety review recorded: a practitioner with experience serving immigrant communities has reviewed for physical-danger and deportation-risk failure modes and approved",
+    "Sequenced after M6; not started until the review apparatus is proven and the street-rights domain (task 022) is evaluated"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-ops-019.json",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-hardening-016.json",
+    "tasks/know-your-rights-streetrights-022.json"
+  ],
+  "output": "Plain-language immigration-enforcement-encounter rights explainers for the confirmed jurisdiction — schema-valid, primary-source-cited, lint-clean, safety-reviewed, and signed off by both a specialist immigration attorney and a practitioner reviewer — with zero content advising unlawful conduct or escalation.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

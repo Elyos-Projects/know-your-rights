@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-handoff-018",
+  "title": "Partner distributes content to beneficiaries; >= 1 documented beneficiary use recorded (no PII)",
+  "project": "know-your-rights",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Definition of Shipped for Know-Your-Rights is a real organization distributing the attorney-reviewed content to real beneficiaries, with at least one documented instance of a beneficiary using it to understand or assert a right. This task is the closed-loop handoff: the secured partner (task 017) distributes the content to the people they serve, neutrality and 'not legal advice' framing are upheld throughout, and the outcome is recorded without collecting any reader PII. Depends on task 017.",
+  "objective": "Complete the closed-loop handoff: support the secured partner organization in distributing the attorney-reviewed tenant-rights content to the people they serve; record at least one documented instance of a beneficiary using the content to understand or assert a right (partner-attested, no reader PII); and confirm that neutrality, 'not legal advice' framing, and currency controls are maintained throughout distribution.",
+  "acceptanceCriteria": [
+    "The secured partner organization distributes the attorney-reviewed content to its served population through at least one channel (website embed, printed handout, in-person clinic, or similar)",
+    "At least one documented instance of a beneficiary using the content to understand or assert a tenant right is recorded by the partner (partner-attested; no reader PII collected or stored in the outcome record)",
+    "Neutrality and 'not legal advice' framing upheld throughout distribution: the partner's distribution channel preserves the 'not legal advice' banner, jurisdiction label, lastVerified stamp, and route-to-help block",
+    "Currency controls maintained: any content displayed or distributed carries a lastVerified stamp; the partner is informed of the validUntil dates and how to check for updates",
+    "Zero reader PII collected or stored: no case intake, no personal legal facts, no tracking of individual beneficiaries; the outcome record contains only partner-attested aggregate or de-identified counts",
+    "Outcome recorded in the project governance log: content distributed (aggregate), documented beneficiary use count, neutrality/currency audit status, and date",
+    "Reviewed and signed off by the steward, the editorial reviewer, and the attorney reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-partner-017.json",
+    "tasks/know-your-rights-hardening-016.json"
+  ],
+  "output": "A governance document recording the completed partner handoff: distribution channel, aggregate reach, at least one documented beneficiary use (partner-attested, no PII), neutrality + currency controls maintained, and outcome recorded — satisfying the Definition of Shipped.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

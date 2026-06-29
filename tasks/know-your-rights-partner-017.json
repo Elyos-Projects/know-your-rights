@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-partner-017",
+  "title": "Secure distribution partner/steward + independent neutrality+currency audit + attorney sign-off of shipped content",
+  "project": "know-your-rights",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Know-Your-Rights is not 'shipped' on merge — it is shipped when a real access-to-justice organization distributes the content to real beneficiaries. This task secures that distribution partner and steward (a legal-aid society, tenant union, law-school clinic, or similar), runs an independent neutrality + currency audit, confirms all shipped content has attorney sign-off, and flips verifiedNeed to true. The acquisition deadline is 2026-12-31; if no partner is secured by 2027-03-31, the build-vs-mothball/pivot decision rule applies. Depends on tasks 015 and 016.",
+  "objective": "Secure a real distribution partner/steward — a legal-aid org, tenant union, law-school clinic, or bar pro-bono program — who will distribute the attorney-reviewed content to the people they serve. Run an independent editorial neutrality + non-advice + currency audit of the full shipped content set. Confirm all rights-stating content has recorded attorney sign-off. Flip verifiedNeed to true once secured.",
+  "acceptanceCriteria": [
+    "A real legal-aid / tenant / worker / civil-liberties org or law-school clinic is secured as the distribution partner/steward: named, consented to the role, and documented with contact and mission alignment",
+    "A named steward is assigned as the last-mile owner for the partner relationship and outcome tracking",
+    "Independent editorial reviewer audits the full shipped content set for neutrality, non-advice compliance, and currency (not the same person as the original drafter or attorney reviewer); all issues resolved before handoff",
+    "All shipped rights-stating content has recorded attorney sign-off (admitted in the pilot jurisdiction), version-scoped; zero-PII posture confirmed across all surfaces",
+    "verifiedNeed can be set to true in all delivery-dependent tasks once partner is secured and audit passes",
+    "Outcome of the acquisition effort documented: if no partner is secured by 2027-03-31, the build-vs-mothball/pivot decision rule is applied and recorded in governance (contribute reviewed content to an existing commons, or mothball to maintenance-only)",
+    "Reviewed and signed off by the secured steward, the editorial reviewer, and the attorney reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-eval-015.json",
+    "tasks/know-your-rights-hardening-016.json",
+    "tasks/know-your-rights-workflow-005.json"
+  ],
+  "output": "A document recording the secured distribution partner/steward, independent neutrality + currency audit results, confirmation of attorney sign-off for all shipped content, and the partner acquisition outcome — gating the handoff (task 018) and the Definition of Shipped.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

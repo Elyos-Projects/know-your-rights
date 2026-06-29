@@ -1,0 +1,34 @@
+{
+  "id": "know-your-rights-jurisdiction-000",
+  "title": "Pilot jurisdiction + domain selection (scored vs. criteria) — gates M2-M6",
+  "project": "know-your-rights",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Know-Your-Rights publishes neutral, primary-source-cited, jurisdiction-specific legal-information explainers starting with tenant rights. Before any content work can begin, the project must select one pilot jurisdiction and confirm the domain. This selection gates M2-M6: it fixes the source corpus, determines which sources are reusable under the edict-of-government doctrine, and determines the required bar admission for the licensed-attorney reviewer. No partner, distribution channel, or attorney reviewer is yet secured, and the decision deadline is 2026-08-31.",
+  "objective": "Score candidate jurisdiction+domain pairs against five explicit criteria and record the decision (or a shortlisted set with a binding decision deadline of 2026-08-31): (1) primary law reusable under the edict-of-government doctrine with no copyrighted compiled-code or annotation lock-in; (2) high access-to-justice need and density of unrepresented people in the domain; (3) an available licensed attorney admitted there, ideally a law-school clinic; (4) manageable legal complexity and a stable statutory regime; (5) a plausible distribution partner. The proposal is tenant rights in one US jurisdiction.",
+  "acceptanceCriteria": [
+    "Scores at least three candidate jurisdiction+domain pairs against all five selection criteria (edict-of-government reusability, access-to-justice need, attorney availability, legal complexity/stability, partner plausibility), with evidence and rationale per criterion",
+    "Records either a confirmed decision or a ranked shortlist with a binding decision deadline of 2026-08-31 and a named decision owner",
+    "Documents which primary law sources for the leading candidate are reusable as government edicts (not subject to copyright) and which would require paraphrase-only treatment",
+    "Identifies at least two concrete candidate attorney reviewer profiles (law-school clinic, bar pro-bono program, or legal-aid network) admitted in the leading jurisdiction",
+    "The selected jurisdiction+domain pair (or shortlisted leading candidate) becomes the fixed input for M1 source corpus work and M2 content work",
+    "Reviewed and approved by maintainer and a licensed attorney familiar with the candidate jurisdiction"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md"
+  ],
+  "output": "A scored decision document recording the pilot jurisdiction+domain selection (or ranked shortlist with a 2026-08-31 deadline): scoring matrix, per-criterion rationale, source-reuse assessment for leading candidate, candidate attorney reviewer profiles, and the binding chosen pair that all subsequent milestones build against.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

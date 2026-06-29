@@ -1,0 +1,37 @@
+{
+  "id": "know-your-rights-content-009",
+  "title": "Tenant-rights explainer set for pilot jurisdiction (eviction, repairs, deposits, lockouts, retaliation, discrimination) — cited, attorney-reviewed",
+  "project": "know-your-rights",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This is the primary content deliverable of Know-Your-Rights: plain-language explainers of tenant rights for the pilot jurisdiction, covering the six core scenarios (eviction process and notice rules, repairs and habitability, security deposits, illegal lockouts and utility shutoffs, retaliation, and housing discrimination). Every explainer is general legal information — a plain-language summary of public law — not individualized legal advice. Every legal claim is primary-source-cited to the named jurisdiction's law. No content ships without recorded sign-off by a licensed attorney admitted in that jurisdiction. Depends on tasks 004, 006, and 007; the minimal kill-gate eval (task 008) must have passed.",
+  "objective": "Draft and iterate to final form the plain-language tenant-rights explainer set for the pilot jurisdiction, covering all six core scenarios. Each explainer states the general legal information — what the law of the named jurisdiction says — with every claim primary-source-cited, passing all content-lint checks, carrying the 'not legal advice' banner and route-to-help block, and at a reading level at or below grade 8. Content must not provide individualized legal advice, predict outcomes, or recommend specific actions for a person's situation. Requires attorney sign-off before delivery.",
+  "acceptanceCriteria": [
+    "Six topic explainers produced for the pilot jurisdiction: eviction process and notice requirements, repairs and habitability obligations, security deposit rules, illegal lockouts and utility shutoffs, retaliation protections, and housing discrimination",
+    "Every explainer frames content as general legal information — plain-language summaries of what the law of the named jurisdiction says — not individualized legal advice or case-specific recommendations",
+    "Every legal claim is primary-source-cited to the named jurisdiction (statute, regulation, court rule, or official agency guidance from the vetted source list in task 006); no uncited claim appears",
+    "All six explainers pass the content-lint suite (task 004): non-advice lint, neutrality lint, jurisdiction-label check, citation-coverage check, and readability check (reading level at or below grade 8)",
+    "Each explainer carries the persistent 'This is general legal information, not legal advice. Laws change and vary by location. For your situation, consult a lawyer or your local legal aid.' banner and a route-to-help block (legal aid, housing court self-help, relevant agency)",
+    "Each explainer is schema-valid per the content schema (task 003): all required fields populated including jurisdiction, scope-level, lastVerified, validUntil, and reviewer sign-off record",
+    "Licensed-attorney sign-off recorded (attorney admitted in the pilot jurisdiction) before delivery; sign-off is version-scoped to this content version and citation set"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-lint-004.json",
+    "tasks/know-your-rights-sources-006.json",
+    "tasks/know-your-rights-provenance-007.json"
+  ],
+  "output": "Six plain-language tenant-rights explainers for the pilot jurisdiction (content/ directory), schema-valid, primary-source-cited, lint-clean, carrying the 'not legal advice' banner and route-to-help block, and licensed-attorney-signed-off — the main deliverable of M2.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

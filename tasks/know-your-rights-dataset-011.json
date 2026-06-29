@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-dataset-011",
+  "title": "Structured rights-card dataset records for the pilot content (schema-valid, CC-BY)",
+  "project": "know-your-rights",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "data"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Know-Your-Rights makes the pilot content reusable by partner organizations as a machine-readable CC-BY dataset. Each rights card from the explainer set (task 009) and wallet card (task 010) becomes a schema-valid dataset record that partners can embed, translate, or republish. The dataset is single-sourced with the static site (no drift) and schema-validated in CI. Because the records state legal rights for a named jurisdiction, this task carries a high risk tier and requires the same attorney sign-off as the content tasks. Depends on tasks 003, 009.",
+  "objective": "Produce and validate the structured rights-card dataset records for the pilot jurisdiction's tenant-rights content. Each record is schema-valid per the content schema (task 003), single-sourced with the site (no manual sync), exported under CC-BY-4.0, and carries all required fields including jurisdiction, scope-level, citations, reviewer sign-off record, lastVerified, and validUntil. CI validates the dataset on every build.",
+  "acceptanceCriteria": [
+    "One structured dataset record produced per major topic from the explainer set (task 009): eviction, repairs, deposits, lockouts, retaliation, discrimination — plus a condensed record for the wallet card (task 010)",
+    "Each record is schema-valid per the content schema from task 003 with all required fields: jurisdiction, scope-level, topic/scenario, plain-language right (stated as general legal information), citations[], 'what you can do / who to contact', not-legal-advice banner, readingLevel, lastVerified, validUntil, reviewer sign-off record, license, provenance",
+    "Dataset is single-sourced with the site: records are produced from the same source files as the HTML pages, with no manual sync step; CI validates that dataset and site are in sync",
+    "Schema validation runs in CI on every build; an invalid record fails the build",
+    "Dataset exported in a machine-readable format (JSON or YAML) under CC-BY-4.0 with attribution to primary law sources and the reviewing attorney preserved in the license field",
+    "Licensed-attorney sign-off recorded for the dataset records (same sign-off as task 009; version-scoped)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-schema-003.json",
+    "tasks/know-your-rights-content-009.json",
+    "tasks/know-your-rights-card-010.json"
+  ],
+  "output": "A CC-BY-4.0 structured dataset (content/dataset/) of schema-valid rights-card records for the pilot jurisdiction's tenant-rights content, single-sourced with the static site, CI-validated, and attorney-sign-off recorded — the machine-readable deliverable for partner reuse.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

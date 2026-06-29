@@ -1,0 +1,37 @@
+{
+  "id": "know-your-rights-card-010",
+  "title": "Concise printable/offline 'tenant rights' wallet card (<= grade 6) — cited, attorney-reviewed",
+  "project": "know-your-rights",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "People often need to know their rights in a moment with no connectivity and under stress. Know-Your-Rights produces a concise, printable wallet card — one page, offline-usable, at or below grade 6 reading level — covering the highest-value tenant rights and the most important 'what to do / who to call' steps. Like all content, it is general legal information (a plain-language summary of what the law of the named jurisdiction says), not individualized advice. Claims trace to the explainer set (task 009) sources. Requires attorney sign-off before delivery. Depends on task 009.",
+  "objective": "Draft and iterate to final form a concise, one-page, printable, offline-usable tenant-rights wallet card for the pilot jurisdiction at or below grade 6 reading level. The card covers the highest-value rights (from the six explainer topics) and the key 'what to do / who to call' steps. All claims trace to the vetted sources from task 006. The card carries the 'not legal advice' disclaimer, a 'verify currency' note, and a lastVerified stamp. Requires licensed-attorney sign-off.",
+  "acceptanceCriteria": [
+    "One-page wallet-card format: legible when printed on a single page or card, usable offline with no connectivity required",
+    "Reading level at or below grade 6 (Flesch-Kincaid or equivalent); verified by the readability check from the content-lint suite (task 004)",
+    "Covers the highest-value tenant rights across the six core topics (eviction notice, habitability, deposits, lockouts, retaliation, discrimination) distilled to actionable plain-language statements of general legal information",
+    "Includes a 'what to do / who to call' section with at least two concrete referral options (local legal aid, housing court self-help, or relevant tenant agency)",
+    "All claims on the card trace back to the vetted primary sources from task 006 (via the explainer set, task 009); no uncited claim appears",
+    "Carries the 'not legal advice' disclaimer, a 'verify currency — laws change' note, and a lastVerified date stamp",
+    "Passes the content-lint suite (task 004): non-advice lint, neutrality lint, jurisdiction-label check, citation-coverage check, and readability check",
+    "Licensed-attorney sign-off recorded (attorney admitted in the pilot jurisdiction) before delivery; sign-off version-scoped to this content version"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-content-009.json",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-lint-004.json"
+  ],
+  "output": "A one-page printable, offline-usable tenant-rights wallet card for the pilot jurisdiction — reading level at or below grade 6, primary-source-cited, lint-clean, carrying the 'not legal advice' disclaimer and lastVerified stamp, and licensed-attorney-signed-off.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

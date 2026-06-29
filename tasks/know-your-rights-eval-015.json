@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-eval-015",
+  "title": "Full eval: cited+jurisdiction-scoped+reviewed vs. blank-slate (accuracy/citation/jurisdiction-fit/neutrality)",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "evaluation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The thesis of Know-Your-Rights is that cited + jurisdiction-scoped + attorney-reviewed content outperforms blank-slate LLM answers on legal accuracy, citation coverage, jurisdiction-fitness, and neutrality. The full M4 eval proves or disproves this thesis on the complete pilot content set (tasks 009-011). If cited+reviewed does not clearly beat blank-slate, the thesis is flagged as failing and the project pauses for reassessment. Depends on tasks 008 and 009.",
+  "objective": "Implement and run the full cited-vs-blank-slate eval on the pilot content set: run fixture scenarios through both the cited+jurisdiction-scoped+attorney-reviewed content path and a blank-slate LLM path; score each on accuracy, citation coverage, jurisdiction-fitness, neutrality, and non-advice compliance; report the delta. Cited+reviewed must clearly beat blank-slate or the thesis is flagged failing.",
+  "acceptanceCriteria": [
+    "Full eval harness implemented (scripts/eval-grounded.ts extended from task 008) covering the complete pilot content set: at least 20 fixture scenarios across the six tenant-rights topics",
+    "Scores each response on five dimensions: accuracy (claim matches attorney-reviewed source), citation coverage (cited vs uncited claim ratio), jurisdiction-fitness (jurisdiction-scoped vs unscoped claim), neutrality (partisan/advocacy framing detected), and non-advice compliance (individualized-advice phrasings detected)",
+    "LLM judge scoring implemented with at least one attorney spot-check on a sample of fixtures; scoring methodology documented",
+    "Structured eval report produced: per-fixture scores, aggregate delta per dimension, and an overall verdict (PASS: cited+reviewed clearly ahead; FAIL: thesis not confirmed with required remediation steps)",
+    "If cited+reviewed does not clearly beat blank-slate on the majority of dimensions, the eval exits non-zero and CI reports THESIS FAIL, blocking M5 work",
+    "Eval harness is provider-neutral: LLM client behind a thin adapter; no vendor lock-in",
+    "Reviewed by maintainer and a licensed attorney for the spot-check; eval result recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-eval-008.json",
+    "tasks/know-your-rights-content-009.json",
+    "tasks/know-your-rights-dataset-011.json"
+  ],
+  "output": "A merged PR containing the full eval harness and a recorded eval report proving that cited+jurisdiction-scoped+attorney-reviewed content clearly beats blank-slate LLM answers on accuracy, citation, jurisdiction-fitness, neutrality, and non-advice compliance — or a THESIS FAIL verdict blocking further investment.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

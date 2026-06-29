@@ -1,0 +1,38 @@
+{
+  "id": "know-your-rights-i18n-024",
+  "title": "Per-language translations of reviewed content",
+  "project": "know-your-rights",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["legal", "civic", "access-to-justice", "tenant-rights", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Non-English speakers are disproportionately among those who need access-to-justice resources and have the fewest alternatives. Know-Your-Rights will offer reviewed translations of its attorney-approved content, but machine-translating legal claims is dangerous — errors in translation can mislead people in high-stakes situations. Each language requires a combined legal review (a licensed attorney who reads the language and can verify accuracy in the named jurisdiction) and a native-speaker linguistic review before any translated legal claim ships. This task covers all per-language translations and is backlog: not started until M3 i18n scaffolding (task 014) is complete.",
+  "objective": "Produce reviewed translations of the pilot tenant-rights content (tasks 009-010) into at least one non-English language, driven by partner need. Each translation requires: a native-speaker translator; a licensed attorney admitted in the jurisdiction who can read the target language to verify legal accuracy; and an independent native-speaker linguistic reviewer. No machine-translated legal claims may ship. Each translated language is a separate, attorney-gated deliverable.",
+  "acceptanceCriteria": [
+    "Translations produced for at least one non-English language confirmed as a partner need (e.g., Spanish, Simplified Chinese, or another language determined by partner demographics)",
+    "Each translated explainer and wallet card is produced by a human translator — no machine-translated legal claims shipped; machine translation may be used only as a drafting aid, never as the final text",
+    "A licensed attorney admitted in the pilot jurisdiction who reads the target language verifies the legal accuracy of each translated claim before delivery; sign-off recorded and version-scoped",
+    "An independent native-speaker linguistic reviewer (separate from the translator) reviews the translation for fluency, plain-language clarity, and reading-level compliance (explainers <= grade 8, cards <= grade 6 as measured in the target language); review recorded",
+    "Translated content carries the 'not legal advice' banner and route-to-help block translated into the target language",
+    "All translated content passes through the i18n review-gate build markers from task 014 (.reviewed-legal + .reviewed-linguistic) before being included in the build output",
+    "Translated content is schema-valid per task 003 with a language field added to the record",
+    "Sequenced after task 014 (i18n scaffolding); each language is a separate gated deliverable"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-i18n-014.json",
+    "tasks/know-your-rights-content-009.json",
+    "tasks/know-your-rights-card-010.json",
+    "tasks/know-your-rights-policy-001.json"
+  ],
+  "output": "Reviewed translations of the tenant-rights explainer set and wallet card into at least one confirmed partner-need language — human-translated, attorney-verified for legal accuracy in the jurisdiction, native-speaker linguistically reviewed, lint-clean, and carrying the 'not legal advice' banner in the target language.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

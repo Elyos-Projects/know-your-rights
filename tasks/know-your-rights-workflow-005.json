@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-workflow-005",
+  "title": "Multi-gate review workflow: CODEOWNERS + PR checklist (editorial->legal->a11y->merge) + reviewers ledger",
+  "project": "know-your-rights",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "governance", "content"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Know-Your-Rights requires a documented, enforced multi-gate review workflow for all content PRs. The gate order is: editorial review (plain language, neutrality, non-advice/UPL) then legal review (licensed attorney admitted in the jurisdiction) then accessibility review then maintainer merge. This workflow must be encoded in CODEOWNERS and a PR checklist template, and a reviewers ledger must record attorney credentials and consent. No content bypasses the legal gate. Depends on the editorial policy (task 001).",
+  "objective": "Define and implement the multi-gate content review workflow: CODEOWNERS configuration enforcing gate order, a PR checklist template covering all gates, and a reviewers ledger format that records attorney credentials (bar admission, jurisdiction, consent to credit). The workflow must make it structurally impossible to merge rights-stating content without a recorded attorney sign-off.",
+  "acceptanceCriteria": [
+    "CODEOWNERS configured so that rights-stating content files require approval from the editorial reviewer role, the licensed-attorney reviewer role (admitted in the jurisdiction), and the accessibility reviewer role before the maintainer can merge",
+    "PR checklist template covers all four gates in order: (1) editorial — plain language, reading level, neutrality, non-advice/UPL; (2) legal — primary-source citations present, attorney sign-off recorded, version-scoped; (3) accessibility — WCAG 2.2 AA spot-check, offline card legibility; (4) maintainer — CI green, schema valid, no secrets",
+    "Reviewers ledger format defined: records reviewer name, role, credentials (bar admission + jurisdiction for attorneys), consent to credit, and version-scoped sign-off (content version + citation hash)",
+    "Attorney sign-off is version-scoped: a later edit to content or its citations requires a fresh sign-off; the ledger format enforces this with a version/hash field",
+    "The workflow document specifies the attorney-veto rule: a licensed attorney's 'do not ship on substance' cannot be overridden by the maintainer; disagreements are logged and escalated to Elyos governance or a second attorney",
+    "Reviewed and approved by an independent editorial reviewer and the maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-policy-001.json",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md"
+  ],
+  "output": "A merged document PR containing the multi-gate review workflow specification, CODEOWNERS configuration, PR checklist template, and reviewers ledger format — making attorney-gated review a structural property of the repository, not a process hope.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

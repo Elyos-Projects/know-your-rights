@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-worker-020",
+  "title": "Worker-rights domain pack (wage theft, overtime, misclassification, safety, retaliation)",
+  "project": "know-your-rights",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["legal", "civic", "access-to-justice", "worker-rights", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Worker rights — wage theft, unpaid overtime, misclassification, unsafe conditions, retaliation — represent the second planned domain for Know-Your-Rights after the tenant-rights pilot is stable and delivered (M6). Like the tenant-rights content, worker-rights explainers must be general legal information (plain-language summaries of what the law of the named jurisdiction says), not individualized legal advice. Every claim must be primary-source-cited to the named jurisdiction's statutes, regulations, or official agency guidance. A licensed attorney admitted in the jurisdiction and experienced in employment/labor law must sign off before delivery. This task is backlog: not started until M6 is complete.",
+  "objective": "Draft and iterate to final form the plain-language worker-rights explainer set for a confirmed second jurisdiction (or the same pilot jurisdiction), covering wage theft, overtime rules, worker misclassification, workplace safety rights, and retaliation protections. All content is general legal information — summaries of what the law says — not individualized advice. Every claim is primary-source-cited, lint-clean, and attorney-signed-off before delivery.",
+  "acceptanceCriteria": [
+    "Five topic explainers produced for the confirmed jurisdiction: wage theft and minimum wage, overtime rules (including exemptions), worker misclassification (employee vs contractor), workplace safety rights, and retaliation protections for workers who complain",
+    "Every explainer frames content as general legal information — plain-language summaries of what the law of the named jurisdiction says — not individualized legal advice or case-specific recommendations",
+    "Every legal claim is primary-source-cited to the named jurisdiction (statute, regulation, official agency guidance); source reuse terms verified per the source-vetting process from task 006",
+    "All explainers pass the full content-lint suite (task 004): non-advice, neutrality, jurisdiction-label, citation-coverage, and readability (reading level at or below grade 8)",
+    "Carries the 'not legal advice' banner and route-to-help block (worker center, wage claim agency, legal aid) on every page",
+    "Licensed-attorney sign-off recorded (admitted in the jurisdiction, experienced in employment/labor law) before delivery; sign-off version-scoped",
+    "Sequenced after M6 is complete and the tenant-rights pilot is stable and delivered"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-ops-019.json",
+    "tasks/know-your-rights-policy-001.json",
+    "tasks/know-your-rights-lint-004.json"
+  ],
+  "output": "Five plain-language worker-rights explainers for the confirmed jurisdiction — schema-valid, primary-source-cited, lint-clean, carrying the 'not legal advice' banner and route-to-help block, and licensed-attorney-signed-off — expanding the Know-Your-Rights commons to the worker-rights domain.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

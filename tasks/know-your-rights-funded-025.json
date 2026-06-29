@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-funded-025",
+  "title": "(Optional) Funded lane for attorney review hours",
+  "project": "know-your-rights",
+  "type": "maintenance",
+  "lane": "funded",
+  "priority": "low",
+  "domain": ["legal", "civic", "access-to-justice", "governance", "legal-review"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "An optional funded lane to compensate a licensed attorney for review hours, if the pro-bono or clinic model cannot secure a reviewer in time. This is a governance and operational task, not a content task: it establishes the funded-lane budget cap, the independence safeguards (the funded nature of the engagement must not influence the attorney's substantive legal judgment or their ability to refuse to approve content they find inaccurate or unsafe), and the documentation required. The hard fundedBudgetUsd cap must not be exceeded. This task is optional and backlog; it must never compromise reviewer independence.",
+  "objective": "Establish the governance framework and documentation for an optional funded lane to compensate a licensed attorney for Know-Your-Rights review hours: the hard budget cap, the independence safeguards (funded engagement does not influence legal judgment; attorney retains full right to refuse to approve content), the documentation and consent requirements, and the accounting records for the cost ledger. Requires Elyos governance approval before any funds are committed.",
+  "acceptanceCriteria": [
+    "Governance document produced specifying the funded-lane framework: hard fundedBudgetUsd cap (not to be exceeded), scope (attorney review hours only, not content production), and the independence safeguard statement",
+    "Independence safeguards documented: the funded nature of the engagement does not influence the attorney's legal judgment; the attorney retains the full right to refuse to approve content they find inaccurate or unsafe; no financial incentive to approve content is created",
+    "Attorney compensation model confirmed to be compatible with bar professional-responsibility rules in the relevant jurisdiction (general-information review vs client representation; no attorney-reader relationship created)",
+    "Documentation and consent requirements specified: attorney consents to the funded engagement terms; consent recorded; funding source and amount recorded in the Elyos cost ledger",
+    "Elyos governance approval recorded before any funds are committed",
+    "No secrets, API keys, financial account credentials, or PII in any committed file (Elyos rule)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md",
+    "tasks/know-your-rights-workflow-005.json"
+  ],
+  "output": "A governance document establishing the optional funded-lane framework for attorney review hours: budget cap, independence safeguards, bar-compatibility confirmation, consent and accounting requirements, and Elyos governance approval record.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "fundedBudgetUsd": 500
+}

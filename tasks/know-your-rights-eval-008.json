@@ -1,0 +1,35 @@
+{
+  "id": "know-your-rights-eval-008",
+  "title": "Minimal cited-vs-blank-slate eval as an early go/no-go kill-gate (handful of fixtures)",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "evaluation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before committing to the large M2 content investment (attorney-reviewed explainer set), Know-Your-Rights needs an early thesis check: does cited + jurisdiction-scoped content actually outperform blank-slate LLM answers on a small fixture set? This minimal eval at M1 is a kill-gate: if cited+scoped does not at least trend ahead on accuracy, citation coverage, and jurisdiction-fitness, HIGH-tier content work pauses for review rather than proceeding to M2. Depends on the provenance model (task 007).",
+  "objective": "Implement a minimal cited-vs-blank-slate eval harness (scripts/eval-grounded.ts) that runs a small fixture set of tenant-rights questions through both a cited+jurisdiction-scoped content path and a blank-slate LLM path, scores each on accuracy, citation coverage, and jurisdiction-fitness, and reports the delta as a go/no-go signal. If cited+scoped does not trend ahead, M2 HIGH-tier content work pauses.",
+  "acceptanceCriteria": [
+    "Eval harness implemented in scripts/eval-grounded.ts; runs a fixture set of at least 5 tenant-rights questions through both a cited+jurisdiction-scoped content path and a blank-slate LLM generation path",
+    "Scores each response on at least three dimensions: accuracy (claim matches vetted source), citation coverage (cited vs uncited), and jurisdiction-fitness (claim is scoped to a named jurisdiction vs unscoped)",
+    "Reports a structured result: scored delta between cited+scoped and blank-slate paths, with per-fixture breakdown and an overall go/no-go verdict",
+    "Kill-gate logic: if cited+scoped does not score ahead of blank-slate on the majority of fixtures, the eval exits non-zero and the CI step reports 'PAUSE M2 — thesis not confirmed'; the result is logged for maintainer review",
+    "The eval is neutral/provider-agnostic: the LLM client is behind a thin adapter; no vendor lock-in in the eval harness",
+    "pnpm test passes with the eval harness wired in as an optional CI step; fixtures committed to the repo",
+    "Reviewed by maintainer and editorial reviewer; go/no-go result recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-provenance-007.json",
+    "tasks/know-your-rights-schema-003.json"
+  ],
+  "output": "A merged PR containing the minimal cited-vs-blank-slate eval harness (scripts/eval-grounded.ts), a fixture set of tenant-rights questions, scoring logic, and a go/no-go CI step — an early kill-gate before M2 HIGH-tier content investment.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

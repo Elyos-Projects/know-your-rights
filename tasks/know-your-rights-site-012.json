@@ -1,0 +1,36 @@
+{
+  "id": "know-your-rights-site-012",
+  "title": "Static site: jurisdiction selector/label, 'not legal advice' + route-to-help blocks, print stylesheet",
+  "project": "know-your-rights",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["legal", "civic", "access-to-justice", "engineering", "publishing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Know-Your-Rights publishes its attorney-reviewed content as a static, accessible, no-JS-required website. Every page must carry a visible jurisdiction label and selector (so readers never mistake one state's law for another's), the persistent 'not legal advice' banner with a route-to-help block, a lastVerified stamp, and a staleness indicator for any content past its validUntil window. The print stylesheet must produce the offline wallet card. Depends on tasks 003 and 009.",
+  "objective": "Implement the publishing surface (apps/site) as a static, accessible, no-JS-required site that renders the pilot jurisdiction's tenant-rights content with: an explicit jurisdiction label on every page (and a jurisdiction selector for multi-jurisdiction expansion), the persistent 'not legal advice' + route-to-help blocks, a lastVerified stamp, staleness flags or withheld display for past-validUntil content, and a print stylesheet that produces the offline wallet card.",
+  "acceptanceCriteria": [
+    "Every page displays an explicit jurisdiction label and the persistent 'This is general legal information, not legal advice. Laws change and vary by location. For your situation, consult a lawyer or your local legal aid.' banner with a route-to-help block (legal aid, housing court self-help, or relevant agency links)",
+    "Every page stamps lastVerified; content past validUntil is displayed with a staleness flag ('this may be out of date — verify before relying') or withheld, per the fail-safe from task 007",
+    "All pages render correctly with JavaScript disabled (no-JS fallback required for core content)",
+    "Print stylesheet produces a legible, one-page offline wallet card matching the card content from task 010",
+    "Jurisdiction selector/label is wired to the content schema's jurisdiction field; adding a second jurisdiction in the future requires only adding content files, not changing site infrastructure",
+    "pnpm build && pnpm test pass; site builds to static HTML + CSS with no server-side runtime required",
+    "Reviewed by maintainer and editorial reviewer; layout sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/know-your-rights-schema-003.json",
+    "tasks/know-your-rights-content-009.json",
+    "tasks/know-your-rights-provenance-007.json"
+  ],
+  "output": "A merged PR implementing the static publishing surface (apps/site) with jurisdiction label, 'not legal advice' banner, route-to-help block, lastVerified stamp, staleness fail-safe display, and a print stylesheet for the offline wallet card.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
